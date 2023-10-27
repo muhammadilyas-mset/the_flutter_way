@@ -28,23 +28,66 @@ class _SliderExampleState extends State<SliderExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('TipCalculator')),
-      body: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Slider(
-          value: _currentSliderValue,
-          max: 100,
-          activeColor: Color.fromARGB(255, 76, 155, 175),
-          inactiveColor: Color.fromARGB(255, 0, 183, 255),
-          divisions: 10,
-          label: _currentSliderValue.round().toString(),
-          onChanged: (double value) {
-            setState(() {
-              _currentSliderValue = value;
-            });
-          },
-        ),
+      appBar: AppBar(title: const Text('Tip Calculator')),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(),
+          const SizedBox(
+            height: 150,
+            child: MyCustomTextField(),
+          ),
+          const SizedBox(
+            child: Text(
+              "Select Tip Percentage",
+              style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(0),
+            child: Slider(
+              value: _currentSliderValue,
+              max: 100,
+              activeColor: const Color.fromARGB(255, 76, 155, 175),
+              inactiveColor: const Color.fromARGB(255, 0, 183, 255),
+              divisions: 10,
+              label: _currentSliderValue.round().toString(),
+              onChanged: (double value) {
+                setState(() {
+                  _currentSliderValue = value;
+                });
+              },
+            ),
+          ),
+          Container(
+            height: 100,
+            color: const Color.fromARGB(255, 59, 160, 255),
+          ),
+        ],
       ),
+    );
+  }
+}
+
+class MyCustomTextField extends StatelessWidget {
+  const MyCustomTextField({super.key});
+
+  @override
+  // ignore: prefer_const_constructors
+  Widget build(BuildContext context) {
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: 'Enter the bill amount...',
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
