@@ -1,42 +1,24 @@
 import 'package:flutter/material.dart';
 
+import 'home.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(const GroceryApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class GroceryApp extends StatefulWidget {
+  const GroceryApp({super.key});
 
+  @override
+  State<GroceryApp> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<GroceryApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
-        ),
-      ),
+    return const MaterialApp(
+      title: 'Flutter Demo',
+      home: MyHomePage(),
     );
   }
 }
