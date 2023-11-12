@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:the_flutter_way/splash.dart';
 
-import 'home.dart';
+import 'navigator.dart';
 
 void main() {
   runApp(const GroceryApp());
@@ -17,8 +18,9 @@ class _MyWidgetState extends State<GroceryApp> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Flutter Demo',
-      home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
+      title: 'Grocery App',
+      home: MyNavigationRuote(),
     );
   }
 }
