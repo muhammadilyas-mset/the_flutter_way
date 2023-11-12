@@ -1,16 +1,45 @@
 # the_flutter_way
 
-A new Flutter project.
+Grocery Food App
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+- In this repository, i have added splash screen
+- then, i designed a registration, login and navigator page to route screen.
+- Create an account, Signin and Bottom navigation bar screen in one class called(navigator.dart)
+- created two models
+1. favorite
+2. recommend
+- reason for creating is to get items details using array
+  
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+What keys widgets or properties i have learned and implement
+- Stateless
+- Statefull
+- Listview
+- Elevatedbutton
+- Route between screens
+- appbar
+- EdgeInsets
+- Textfield
+- Borderdecaration
+- Sizebox
+- Input decoration
+- outline input border
+- underline input border
+- border radius
+- Navigations : Push/pop/pushAndRemoveUntil, Predefined routes and bottom sheets.
+- MaterialPageRoute
+- Model route
+- onTapped method to setstate()
+- PageView
+- Pagecontroller
+- Animation in page controller
+- Listview
+- how to create listiew using array[]
+- what is initstate()
+- Bottom Navigation bar and how it set state
+- SvgPicture
+- splash screen package
+- app icons
+- how to add any image in assets
