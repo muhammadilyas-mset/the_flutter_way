@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_flutter_way/splash.dart';
 
-import 'navigator.dart';
-
 void main() {
   runApp(const GroceryApp());
 }
@@ -20,7 +18,7 @@ class _MyWidgetState extends State<GroceryApp> {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Grocery App',
-      home: MyNavigationRuote(),
+      home: SplashScreen(),
     );
   }
 }
