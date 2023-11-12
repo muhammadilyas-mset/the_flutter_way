@@ -281,6 +281,7 @@ class GroceryAppHomePage extends StatefulWidget {
 class GroceryAppHomePageState extends State<GroceryAppHomePage> {
   //first we have to put value 0 becuase our index is in zero state
   int _selectedpageindex = 0;
+  // Save the current [page] with [PageStorage] and restore it if this controller's scrollable is recreated.
   PageController pageController =
       PageController(); //for Pageview we have to set a controller here
   void onTapped(int index) {
@@ -307,6 +308,10 @@ class GroceryAppHomePageState extends State<GroceryAppHomePage> {
   }
 
   @override
+  // initState() method is called only and only once
+  //and is used generally for initializing the previously defined variables of the stateful widget.
+  //initState() method is overridden mostly because as mentioned earlier
+  // it is called only once in its lifetime
   void initState() {
     _getFavoriteCategories();
     _getRecommendation();
